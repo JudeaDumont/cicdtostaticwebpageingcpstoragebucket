@@ -4,7 +4,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 resource "google_storage_bucket" "tfstatebucket" {
-  name          = var.project + "-tfstate"
+  name          = "ecstatic-effort-347701-tfstate"
   location      = "US"
   force_destroy = true
   project       = var.project
