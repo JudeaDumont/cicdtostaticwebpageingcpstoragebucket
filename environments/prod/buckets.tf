@@ -20,10 +20,12 @@ resource "google_storage_bucket" "tf-state" {
       type = "Delete"
     }
   }
+  depends_on = [data.google_iam_policy.gcb_runs_tf_access]
 }
 
 resource "google_storage_bucket" "web" {
   name          = "web"
   location      = "US"
   force_destroy = true
+  depends_on = [data.google_iam_policy.gcb_runs_tf_access]
 }

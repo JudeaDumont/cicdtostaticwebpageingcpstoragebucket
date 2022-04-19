@@ -1,9 +1,9 @@
 resource "google_project_iam_policy" "project" {
   project     = var.project
-  policy_data = data.google_iam_policy.gcb-runs-tf.policy_data
+  policy_data = data.google_iam_policy.gcb_runs_tf_access.policy_data
 }
 
-data "google_iam_policy" "gcb-runs-tf" {
+data "google_iam_policy" "gcb_runs_tf_access" {
   binding {
     role = "roles/editor"
 
