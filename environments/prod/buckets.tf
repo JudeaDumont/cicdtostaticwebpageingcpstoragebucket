@@ -24,8 +24,8 @@ resource "google_storage_bucket" "tf-state" {
   #depends_on = [data.google_iam_policy.storage_object_access]
 }
 
-resource "google_storage_bucket" "web" {
-  name          = "web"
+resource "google_storage_bucket" "web_bucket" {
+  name          = "www.influencerwebsite.com"
   location      = "US"
   force_destroy = true
   project       = var.project
