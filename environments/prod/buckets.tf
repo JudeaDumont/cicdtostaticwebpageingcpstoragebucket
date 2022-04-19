@@ -3,7 +3,7 @@
 // tf state has versioning, web does not, we don't want GCP driving costs up for something that is done by git
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-resource "google_storage_bucket" "tf_state_bucket" {
+resource "google_storage_bucket" "terraform_state_bucket" {
   name          = "tf_state_bucket"
   location      = "US"
   force_destroy = true
