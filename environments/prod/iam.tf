@@ -1,9 +1,9 @@
 resource "google_project_iam_policy" "project" {
   project     = var.project
-  policy_data = data.google_iam_policy.gcb_runs_tf_access.policy_data
+  policy_data = data.google_iam_policy.editor_access.policy_data
 }
 
-data "google_iam_policy" "gcb_runs_tf_access" {
+data "google_iam_policy" "editor_access" {
   binding {
     role = "roles/editor"
 
@@ -13,7 +13,7 @@ data "google_iam_policy" "gcb_runs_tf_access" {
   }
 }
 
-data "google_iam_policy" "gcb_runs_tf_access" {
+data "google_iam_policy" "storage_object_access" {
   binding {
     role = "roles/storage.objectViewer"
 
