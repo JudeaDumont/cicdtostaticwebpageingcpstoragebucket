@@ -1,6 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket = "ecstatic-effort-347701-tfstate"
+    bucket = "tf-state"
     prefix = "env/prod"
+    depends_on = [google_storage_bucket.tf-state]
   }
 }
