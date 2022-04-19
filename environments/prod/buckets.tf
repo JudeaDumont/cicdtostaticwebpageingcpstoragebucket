@@ -4,7 +4,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 resource "google_storage_bucket" "tfstatebucket" {
-  name          = "tfstatebucket"
+  name          = var.project + "-tfstate"
   location      = "US"
   force_destroy = true
   project       = var.project
@@ -21,7 +21,7 @@ resource "google_storage_bucket" "tfstatebucket" {
       type = "Delete"
     }
   }
-  #depends_on = [data.google_iam_policy.storage_object_access]
+  depends_on = [data.google_iam_policy.storage_object_access]
 }
 
 resource "google_storage_bucket" "web_bucket" {
@@ -34,5 +34,5 @@ resource "google_storage_bucket" "web_bucket" {
     main_page_suffix = "index.html"
     not_found_page   = "404.html"
   }
-  #depends_on = [data.google_iam_policy.storage_object_access]
-}#
+  depends_on = [data.google_iam_policy.storage_object_access]
+}

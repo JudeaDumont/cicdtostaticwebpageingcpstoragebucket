@@ -1,6 +1,6 @@
-#terraform {
-#  backend "gcs" {
-#    bucket = "tf-state"
-#    prefix = "env/prod"
-#  }
-#}
+terraform {
+  backend "gcs" {
+    bucket = var.project + "-tfstate"
+    prefix = "env/prod"
+  }
+}
