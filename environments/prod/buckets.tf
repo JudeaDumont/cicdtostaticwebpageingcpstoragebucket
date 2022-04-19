@@ -3,8 +3,8 @@
 // tf state has versioning, web does not, we don't want GCP driving costs up for something that is done by git
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-resource "google_storage_bucket" "tf-state" {
-  name          = "tf-state"
+resource "google_storage_bucket" "tf_state_bucket" {
+  name          = "tf_state_bucket"
   location      = "US"
   force_destroy = true
   project       = var.project
@@ -25,9 +25,14 @@ resource "google_storage_bucket" "tf-state" {
 }
 
 resource "google_storage_bucket" "web_bucket" {
-  name          = "www.influencerwebsite.com"
+  name          = "www.influencerwebsiteexample.com"
   location      = "US"
   force_destroy = true
   project       = var.project
+
+  website {
+    main_page_suffix = "index.html"
+    not_found_page   = "404.html"
+  }
   #depends_on = [data.google_iam_policy.storage_object_access]
 }
