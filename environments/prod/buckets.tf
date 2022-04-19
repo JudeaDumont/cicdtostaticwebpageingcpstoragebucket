@@ -35,4 +35,4 @@ resource "google_storage_bucket" "web_bucket" {
     not_found_page   = "404.html"
   }
   #depends_on = [data.google_iam_policy.storage_object_access]
-}
+}#
