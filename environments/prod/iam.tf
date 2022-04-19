@@ -8,7 +8,7 @@ resource "google_project_iam_binding" "storage_object_access" {
   role    = "roles/storage.objectViewer"
 
   members = [
-    "user:343129465024@cloudbuild.gserviceaccount.com",
+    "serviceAccount:343129465024@cloudbuild.gserviceaccount.com",
   ]
 }
 
