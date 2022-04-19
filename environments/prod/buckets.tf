@@ -4,7 +4,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 resource "google_storage_bucket" "terraform_state_bucket" {
-  name          = "tf_state_bucket"
+  name          = "tfstatebucket"
   location      = "US"
   force_destroy = true
   project       = var.project
