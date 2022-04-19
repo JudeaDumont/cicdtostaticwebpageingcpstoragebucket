@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = var.project + "-tfstate"
+    bucket = "ecstatic-effort-347701-tfstate"
     prefix = "env/prod"
   }
 }
