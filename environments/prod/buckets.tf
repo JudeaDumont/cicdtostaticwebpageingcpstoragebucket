@@ -7,6 +7,7 @@ resource "google_storage_bucket" "tf-state" {
   name          = "tf-state"
   location      = "US"
   force_destroy = true
+  project       = var.project
 
   versioning {
     enabled = true
@@ -27,5 +28,6 @@ resource "google_storage_bucket" "web" {
   name          = "web"
   location      = "US"
   force_destroy = true
+  project       = var.project
   depends_on = [data.google_iam_policy.storage_object_access]
 }
