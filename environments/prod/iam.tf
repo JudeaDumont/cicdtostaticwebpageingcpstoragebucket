@@ -1,6 +1,6 @@
 resource "google_project_iam_policy" "iam_access_project_policy" {
   project     = var.project
-  policy_data = data.google_iam_policy.editor_access.policy_data
+  policy_data = data.google_iam_policy.iam_access.policy_data
 }
 
 resource "google_project_iam_policy" "editor_access_project_policy" {
