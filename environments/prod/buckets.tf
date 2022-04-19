@@ -21,7 +21,7 @@ resource "google_storage_bucket" "tf-state" {
       type = "Delete"
     }
   }
-  depends_on = [data.google_iam_policy.storage_object_access]
+  #depends_on = [data.google_iam_policy.storage_object_access]
 }
 
 resource "google_storage_bucket" "web" {
@@ -29,5 +29,5 @@ resource "google_storage_bucket" "web" {
   location      = "US"
   force_destroy = true
   project       = var.project
-  depends_on = [data.google_iam_policy.storage_object_access]
+  #depends_on = [data.google_iam_policy.storage_object_access]
 }
