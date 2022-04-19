@@ -15,23 +15,13 @@ steps:
   args: 
   - '-c'
   - |
-      if [ -d "environments/$BRANCH_NAME/" ]; then
-        cd environments/$BRANCH_NAME
-        terraform init
-      else
-        for dir in environments/*/
-        do 
-          cd ${dir}   
-          env=${dir%*/}
-          env=${env#*/}
-          echo ""
-          echo "*************** TERRAFORM INIT ******************"
-          echo "******* At environment: ${env} ********"
-          echo "*************************************************"
-          terraform init || exit 1
-          cd ../../
-        done
-      fi 
+    cd environments/prod   
+    echo ""
+    echo "*************** TERRAFOM INIT ******************"
+    echo "******* At environment: prod ********"
+    echo "*************************************************"
+    terraform init || exit 1
+    cd ../../
 
 # [START tf-plan]
 - id: 'tf plan'
@@ -40,23 +30,13 @@ steps:
   args: 
   - '-c'
   - | 
-      if [ -d "environments/$BRANCH_NAME/" ]; then
-        cd environments/$BRANCH_NAME
-        terraform plan
-      else
-        for dir in environments/*/
-        do 
-          cd ${dir}   
-          env=${dir%*/}
-          env=${env#*/}  
-          echo ""
-          echo "*************** TERRAFOM PLAN ******************"
-          echo "******* At environment: ${env} ********"
-          echo "*************************************************"
-          terraform plan || exit 1
-          cd ../../
-        done
-      fi 
+      cd environments/prod   
+      echo ""
+      echo "*************** TERRAFOM PLAN ******************"
+      echo "******* At environment: prod ********"
+      echo "*************************************************"
+      terraform plan || exit 1
+      cd ../../
 # [END tf-plan]
 
 # [START tf-apply]
@@ -66,12 +46,6 @@ steps:
   args: 
   - '-c'
   - | 
-      if [ -d "environments/$BRANCH_NAME/" ]; then
-        cd environments/$BRANCH_NAME      
-        terraform apply -auto-approve
-      else
-        echo "***************************** SKIPPING APPLYING *******************************"
-        echo "Branch '$BRANCH_NAME' does not represent an oficial environment."
-        echo "*******************************************************************************"
-      fi
+      cd environments/prod    
+      terraform apply -auto-approve
 # [END tf-apply]      
