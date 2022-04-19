@@ -3,7 +3,7 @@
 #  policy_data = data.google_iam_policy.iam_access.policy_data
 #}
 
-resource "google_project_iam_binding" "project" {
+resource "google_project_iam_binding" "storage_object_access" {
   project = var.project
   role    = "roles/storage.objectViewer"
 
