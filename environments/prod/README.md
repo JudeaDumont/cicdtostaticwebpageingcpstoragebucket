@@ -9,3 +9,10 @@ If you need to make changes to the infrastructure,
 it is actually setup to automatically propagate all the way up, 
 if something fails, just rollback to a previous version of this repo in github
 and then push that version as a change
+
+
+###Some more advanced project context (next steps for infrastructural improvement):
+
+- Push directly into prod for reasons of project addition simplicity
+- Permissions are granted at the role level as opposed to custom service accounts
+- Git history is somewhat messy, though the majority of commits

@@ -1,4 +1,5 @@
 # How to Contribute
+
 This is directed at the level of an influencer writing a blog
 
 In "site" you will find static web files as an example blog site to perhaps 
@@ -29,3 +30,11 @@ If you need access to the project and the build reports (google cloud build) con
 
 dumontjudea2@gmail.com
 
+Github:
+https://github.com/JudeaDumont/cicdtostaticwebpageingcpstoragebucket
+
+In case the domain expires (or stops working):
+https://storage.googleapis.com/www.influencerwebsiteexample.com/index.html
+
+Cloud Build Logs:
+https://console.cloud.google.com/cloud-build/builds?referrer=search&authuser=1&project=ecstatic-effort-347701
