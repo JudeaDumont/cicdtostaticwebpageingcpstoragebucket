@@ -3,6 +3,8 @@
 // tf state has versioning, web does not, we don't want GCP driving costs up for something that is done by git
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 resource "google_storage_bucket" "tfstatebucket" {
   name          = "ecstatic-effort-347701-tfstate"
   location      = "US"
