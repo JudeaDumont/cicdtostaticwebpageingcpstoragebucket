@@ -10,5 +10,3 @@ gsutil -m rm gs://$BUCKET/**
 gsutil -m -h "Cache-Control:no-cache" cp -r ./ gs://$BUCKET/
 # Make all the files public
 gsutil -m acl set -R -a public-read gs://$BUCKET/
-# set homepage and error page
-gsutil web set -m index.html -e index.html gs://$BUCKET
