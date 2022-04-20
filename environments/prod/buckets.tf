@@ -21,18 +21,18 @@ resource "google_storage_bucket" "tfstatebucket" {
       type = "Delete"
     }
   }
-  depends_on = [google_project_iam_binding.storage_object_access]
+#  depends_on = [google_project_iam_binding.storage_object_access]
 }
 
-resource "google_storage_bucket" "web_bucket" {
-  name          = "www.influencerwebsiteexample.com"
-  location      = "US"
-  force_destroy = true
-  project       = var.project
-
-  website {
-    main_page_suffix = "index.html"
-    not_found_page   = "404.html"
-  }
-  depends_on = [google_project_iam_binding.storage_object_access]
-}
+#resource "google_storage_bucket" "web_bucket" {
+#  name          = "www.influencerwebsiteexample.com"
+#  location      = "US"
+#  force_destroy = true
+#  project       = var.project
+#
+#  website {
+#    main_page_suffix = "index.html"
+#    not_found_page   = "404.html"
+#  }
+#  depends_on = [google_project_iam_binding.storage_object_access]
+#}
