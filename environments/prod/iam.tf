@@ -6,8 +6,8 @@ resource "google_storage_bucket_iam_binding" "binding" {
   ]
 }
 
-resource "google_project_iam_binding" "cloud_build_access_to_iam" {
-  project = var.project
+resource "google_storage_bucket_iam_binding" "cloud_build_access_to_iam" {
+  bucket = google_storage_bucket.web_bucket.name
   role    = "roles/storage.objectAdmin"
 
   members = [
