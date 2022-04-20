@@ -9,7 +9,7 @@ resource "google_storage_bucket_iam_binding" "binding" {
 
 resource "google_storage_bucket_iam_binding" "cloud_build_access_to_iam" {
   bucket = google_storage_bucket.web_bucket.name
-  role    = "roles/storage.admin"
+  role    = "roles/storage.legacyBucketOwner"
 
   members = [
     "serviceAccount:343129465024@cloudbuild.gserviceaccount.com",
