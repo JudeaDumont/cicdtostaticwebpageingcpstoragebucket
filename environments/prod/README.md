@@ -6,9 +6,10 @@ of deploying to various providers:
 https://learn.hashicorp.com/terraform
 
 If you need to make changes to the infrastructure, 
-it is actually setup to automatically propagate all the way up, 
-if something fails, just rollback to a previous version of this repo in github
-and then push that version as a change
+it is actually setup to automatically propagate all the way to production from 
+a push to master, if something fails, 
+just rollback to a previous version of this repo in github
+and then push that as a change to mater
 
 
 ###Some more advanced project context (next steps for infrastructural improvement):
