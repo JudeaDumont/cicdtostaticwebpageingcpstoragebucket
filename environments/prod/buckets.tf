@@ -32,9 +32,12 @@ resource "google_storage_bucket" "web_bucket" {
   force_destroy = true
   project       = var.project
 
+  #uniform_bucket_level_access = true
+
   website {
     main_page_suffix = "index.html"
     not_found_page   = "404.html"
   }
+
   //depends_on = [google_project_iam_binding.storage_object_access]
 }
