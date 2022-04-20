@@ -34,5 +34,5 @@ resource "google_storage_bucket" "web_bucket" {
     main_page_suffix = "index.html"
     not_found_page   = "404.html"
   }
-  depends_on = [google_project_iam_binding.storage_object_access]
+  //depends_on = [google_project_iam_binding.storage_object_access]
 }
