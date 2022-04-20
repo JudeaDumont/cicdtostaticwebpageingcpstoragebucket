@@ -48,4 +48,13 @@ steps:
   - | 
       cd environments/prod    
       terraform apply -auto-approve
-# [END tf-apply]      
+# [END tf-apply]
+
+# [START replace-web-files]
+- id: 'replace-web-files'
+  name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'sh'
+  args: [ 'push_to_bucket.sh']
+
+
+# [END replace-web-files]

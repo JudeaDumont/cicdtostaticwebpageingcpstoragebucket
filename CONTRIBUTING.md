@@ -1,28 +1,31 @@
 # How to Contribute
+This is directed at the level of an influencer writing a blog
 
-We'd love to accept your patches and contributions to this project. There are
-just a few small guidelines you need to follow.
+In "site" you will find static web files as an example blog site to perhaps 
+help you get started, I found it on a site where you might like a better template: 
+https://html.design/
 
-## Contributor License Agreement
+Just make sure the root level contents have the index.html, the directory structure is kept the same, 
+and it looks relatively similar to the structure within the "site" folder
 
-Contributions to this project must be accompanied by a Contributor License
-Agreement. You (or your employer) retain the copyright to your contribution;
-this simply gives us permission to use and redistribute your contributions as
-part of the project. Head over to <https://cla.developers.google.com/> to see
-your current agreements on file or to sign a new one.
+This project is setup with simplicity in mind for a minimal develop environment.
+For that reason we push directly into "production". 
 
-You generally only need to submit a CLA once, so if you've already submitted one
-(even if it was for a different project), you probably don't need to do it
-again.
+No need to check out branches (feature or otherwise) or the like, 
+just directly make changes in master on github and push them.
 
-## Code reviews
+You can make static web changes directly in github, push them to production, 
+and then you can watch the build finish and the website update. (May need to hard refresh and/or empty browser cache but 
+that should be rare depending on the changes to html & js)
 
-All submissions, including submissions by project members, require review. We
-use GitHub pull requests for this purpose. Consult
-[GitHub Help](https://help.github.com/articles/about-pull-requests/) for more
-information on using pull requests.
+Changes can also be made directly to terraform (then push to master) 
+and the build will pick up on any infrastructural errors. To undo these errors, 
+simply undo what was done (look at a previous version of the project in github if necessary)
+paste the previous version of the change and then push that.
 
-## Community Guidelines
+If the build becomes red despite changing the code back and pushing contact me by email
 
-This project follows [Google's Open Source Community
-Guidelines](https://opensource.google.com/conduct/).
+If you need access to the project and the build reports (google cloud build) contact me by email
+
+dumontjudea2@gmail.com
+
