@@ -14,4 +14,4 @@ resource "google_storage_bucket_iam_binding" "cloud_build_access_to_iam" {
   members = [
     "serviceAccount:343129465024@cloudbuild.gserviceaccount.com",
   ]
-}
+}#
