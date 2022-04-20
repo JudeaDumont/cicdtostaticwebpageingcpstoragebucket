@@ -3,6 +3,6 @@ resource "google_project_iam_binding" "storage_object_viewers" {
   role    = "roles/storage.objectViewer"
 
   members = [
-    "user:allUsers",
+    "allUsers",
   ]
 }
